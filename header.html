@@ -1,0 +1,323 @@
+<html lang="pt-br">
+    <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><?=$title?></title>
+
+    <base href='<?=base_url()?>'>
+
+    <meta name="keywords" content="<?=$keywords ?>" />
+    <meta name="description" content="<?=$description ?>" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="www.valoremarketing.com.br" />
+
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="<?=current_url() ?>" />
+    <meta property="og:title" content="<?=(isset($ogtitle)) ? $ogtitle : "Barros Autopeças" ?>" />
+    <meta property="og:site_name" content="Barros Autopeças" />
+    <meta property="og:description" content="<?=(isset($ogdescription)) ? $ogdescription : "A Barros Autopeças distribui os melhores produtos para o mercado de reposição automotiva e está sempre pronta para oferecer soluções eficientes para o setor." ?>" />
+    <meta property="og:image" content="<?=(isset($ogimage)) ? $ogimage : base_url()."assets/images/logo-barros-painel-facebook.jpg" ?>" />
+    <meta property="og:type" content="website" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/barros-57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/barros-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/barros-114.png" />
+
+     <!-- Custom styles for this template -->
+    <!--
+     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+     <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+    -->
+
+     <link href="assets/css/flexslider.css" rel="stylesheet" type="text/css" media="screen" />
+     <link href="assets/css/slider.css" rel="stylesheet" type="text/css" media="screen" />
+
+     <link href="assets/css/jquery.bxslider.css" rel="stylesheet" type="text/css" media="screen" />
+     <link href="assets/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery.selectbox.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/ts.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/countdown.css" rel="stylesheet" type="text/css" />
+    <!--
+        <link href="assets/css/new-version/styles.css?<?php echo filemtime('assets/css/new-version/styles.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="assets/css/new-version/responsive.css?<?php echo filemtime('assets/css/new-version/responsive.css'); ?>" rel="stylesheet" type="text/css" />
+    -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Facebook Pixel Code Remarketing -->
+<script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1652239904989869');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1652239904989869&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- GA -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56798349-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<?php
+    if(isset($facebookpixel)){
+        echo $facebookpixel;
+    }
+?>
+
+</head>
+<body>
+<!-- Header Tailwind -->
+<!-- Main navigation container -->
+<nav
+  class="relative flex w-full flex-nowrap items-center justify-between bg-white shadow-dark-mild lg:flex-wrap lg:justify-start"
+  data-twe-navbar-ref>
+  <div class="flex w-full flex-wrap items-center justify-between px-3">
+    <!-- Hamburger button for mobile view -->
+    <button
+      class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+      type="button"
+      data-twe-collapse-init
+      data-twe-target="#navbarSupportedContent8"
+      aria-controls="navbarSupportedContent8"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <!-- Hamburger icon -->
+      <span
+        class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+
+    <!-- Collapsible navbar container -->
+    <div
+      class="!visible mt-2 hidden flex-grow basis-[100%] items-center justify-center lg:mt-0 lg:!flex lg:basis-auto"
+      id="navbarSupportedContent8"
+      data-twe-collapse-item>
+      <!-- Left links -->
+      <ul
+        class="list-style-none flex flex-col ps-0 lg:mt-1 lg:flex-row items-center"
+        data-twe-navbar-nav-ref>
+        <!-- Home link -->
+        <li
+          class="m-0 p-0"
+          data-twe-nav-item-ref>
+          <a
+            class="text-[#CF0000]"
+            aria-current="page"
+            href="<?php echo base_url(); ?>"
+            data-twe-nav-link-ref
+            >
+                <img src="assets/images/new-version/barros-header-logo.jpg" alt="Barros Autopeças" style="height: 40px; width: 130px" loading="lazy"/>
+            </a
+          >
+        </li>
+        <!-- Link -->
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+            href="/"
+            data-twe-nav-link-ref
+            >
+            <img src="assets/images/new-version/header-logo-1.png" alt="Quem somos"/>
+            <p class="text-[#CF0000]">Quem Somos</p>
+        </a>
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+            href="/"
+            data-twe-nav-link-ref
+            >
+            <img src="assets/images/new-version/header-logo-2.png" alt="Filiais"/>
+            <p class="text-[#CF0000]">
+                Filiais
+            </p>
+            </a>
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="/"
+            data-twe-nav-link-ref
+            >Fornecedores</a
+          >
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="/"
+            data-twe-nav-link-ref
+            >Blog</a
+          >
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="/"
+            data-twe-nav-link-ref
+            >Contato</a
+          >
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="/"
+            data-twe-nav-link-ref
+            >Trabalhe Conosco</a
+          >
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="/"
+            data-twe-nav-link-ref
+            >Cliente</a
+          >
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref>
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="/"
+            data-twe-nav-link-ref
+            >Compre online</a
+          >
+        </li>
+        <li
+          class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0"
+          data-twe-nav-item-ref
+        >          
+          <a
+            class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+            href="https://www.nexusautomotiveinternational.eu/en"
+            target="_blank"
+            data-twe-nav-link-ref
+            >
+                <img src="assets/images/new-version/header-logo-9.webp" alt="nexusautomotiveinternational" style="height: 25px; width: 25px"/>
+            </a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--- Header Bootstrap -->
+<!--
+<nav class="navbar navbar-default navbar-fixed-top header" role="navigation">
+    <div class="container container-fluid">
+        <div class="navbar-header col-md-2">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                <img src="assets/images/new-version/barros-header-logo.jpg" alt="Barros Autopeças"/>
+            </a>
+            <div class="navbar-header-nexus">
+                <a class="navbar-header-nexus-brand" href="https://www.nexusautomotiveinternational.eu/en" target="_blank">
+                    <img src="assets/images/new-version/header-logo-9.webp" alt="nexusautomotiveinternational"/>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="navbar-links col-md-10 hidden-xs">
+            <ul class="navbar-links-ul">
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="#quem-somos">
+                        <img src="assets/images/new-version/header-logo-1.png" alt="Quem somos"/>
+                        <h3>Quem Somos</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="#filiais">
+                        <img src="assets/images/new-version/header-logo-2.png" alt="Filiais"/>
+                        <h3>Filiais</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="#fornecedores">
+                        <img src="assets/images/new-version/header-logo-3.webp" alt="Fornecedores"/>
+                        <h3>Fornecedores</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="/blog/">
+                        <img src="assets/images/new-version/header-logo-4.webp" alt="Blog"/>
+                        <h3>Blog</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="#contato">
+                        <img src="assets/images/new-version/header-logo-5.webp" alt="Contato"/>
+                        <h3>Contato</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="#trabalhe-conosco">
+                        <img src="assets/images/new-version/header-logo-6.webp" alt="Trabalhe conosco"/>
+                        <h3>Trabalhe Conosco</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="https://bapautomotiva.com.br/login?cliente=1" target="_blank">
+                        <img src="assets/images/new-version/header-logo-7.webp" alt="Cliente"/>
+                        <h3>Cliente</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                        <img src="assets/images/new-version/header-logo-8.webp" alt="Compre online"/>
+                        <h3>Compre online</h3>
+                    </a>
+                </li>
+                <li class="navbar-links-li">
+                    <a class="navbar-brand" href="https://www.nexusautomotiveinternational.eu/en" target="_blank">
+                        <img src="assets/images/new-version/header-logo-9.webp" alt="nexusautomotiveinternational"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+-->

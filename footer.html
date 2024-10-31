@@ -1,0 +1,182 @@
+<nav class="footer" role="navigation">
+    <h5 class="">B.A.P. Automotiva Ltda. – R. Laura Albani de Barros, 157, Saúde, Mogi Mirim-SP | Desenvolvido: <span>Studio Ágil</span></h5>
+  </nav>
+  
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGn2udBPGDFD3SLydQ0iXjmVHyb7ZLj98&amp;sensor=false"></script>
+  
+  <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="assets/js/wow.min.js"></script>
+  
+  <script type="text/javascript" src="assets/js/jquery.mixitup.min.js"></script>
+  <script type="text/javascript" src="assets/js/retina.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
+  <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="assets/js/slider.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.bxslider.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.selectbox-0.2.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.easing.js"></script>
+  <script type="text/javascript" src="assets/js/countdown.js"></script>
+  <script type="text/javascript" src="assets/js/main.js?v=1.5"></script>
+  <script type="text/javascript" src="assets/js/mask.js"></script>
+  <script type="text/javascript" src="assets/js/verifica-data.js"></script>
+  <script type="text/javascript" src="assets/js/devolucao_garantia.js?v=2"></script>
+  <script type="text/javascript" src="assets/js/cidades-estados.js"></script>
+  
+  <script>
+  // Loader loading
+  $('.loader-container').hide()
+  $('.loadTrigger').click( function () {
+      $('.loader-container').fadeIn()
+  })
+  
+  
+  $(document).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+  });
+  
+  jQuery(function($) {
+      $("input[name='celular'], input[name='telefone']").focusout(function() {
+          var phone, element;
+          element = $(this);
+          element.unmask();
+          phone = element.val().replace(/\D/g, '');
+          if (phone.length > 10) {
+              element.mask("(99) 99999-9999");
+          } else {
+              element.mask("(99) 9999-99999");
+          }
+      }).trigger('focusout');
+      $("input[name='celular1']").focusout(function() {
+          var phone, element;
+          element = $(this);
+          element.unmask();
+          phone = element.val().replace(/\D/g, '');
+          if (phone.length > 10) {
+              element.mask("(99) 9999-99999");
+          } else {
+              element.mask("(99) 9999-99999");
+          }
+      }).trigger('focusout');
+      $(".data").mask("99/99/9999");
+      $("input[name='nascimento']").mask("99/99/9999");
+      $("input[name='cpf'], .cpf").mask("999.999.999-99");
+      $("input[name='cnpj']").mask("99.999.999/9999-99")
+      $("input[name='telefone1']").mask("(99) 9999-9999");
+      //$("#campoTelefone").mask("(999) 999-9999");
+  
+      var i = $('.active').attr('class').replace("active", "").replace("dropdown", "");
+  
+      $('.nav li').mouseover(function() {
+  
+          if ($(this).hasClass('active')) {
+  
+          } else {
+              $('.nav li').removeClass('active');;;
+  
+              $(this).addClass('active');
+          }
+  
+      }).mouseout(function() {
+          $('.nav li').removeClass('active');
+  
+          $('.nav li.' + i).addClass('active');
+      });
+  
+  
+  });
+  </script>
+  
+  <script>
+  function segunda_via(banco) {
+  
+      if (banco == "banco_do_brasil") {
+  
+          $("#banco_itau").hide();
+          $("#banco_do_brasil").fadeIn();
+  
+      } else {
+  
+          $("#banco_do_brasil").hide();
+          $("#banco_itau").fadeIn();
+  
+      }
+  
+  }
+  </script>
+  
+  <script>
+  $("#ativar_cliente").click(function() {
+  
+      $("#representante").hide();
+      $("#cliente").fadeIn();
+  
+  
+  });
+  
+  $("#ativar_representante").click(function() {
+  
+      $("#cliente").hide();
+      $("#representante").fadeIn();
+  
+  
+  });
+  </script>
+  
+  <script>
+  function ver_informacoes(id) {
+  
+      $.ajax({
+  
+          type: "post",
+          url: "barros/devolucao_ver",
+          data: 'id=' + id
+      }).success(function(retorno) {
+  
+          $("#retorno_ver").html(retorno);
+          $("#ver").modal("show");
+  
+      });
+  }
+  </script>
+  
+  <script>
+  $(document).ready(function() {
+  
+      $("a.fancybox").fancybox({
+          'transitionIn': 'elastic',
+          'transitionOut': 'elastic',
+          'speedIn': 600,
+          'speedOut': 200,
+          'overlayShow': false
+      });
+  
+  });
+  </script>
+  
+  <script>
+      new dgCidadesEstados({
+          cidade: document.getElementById('cidade'),
+          estado: document.getElementById('estado'),
+          change: false
+      });
+  </script>
+  <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) {
+          $(window).on('load',function(){
+              $('#opcaoRecesso').modal('show')
+          })
+      })
+  </script>
+  
+  <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script> -->
+  
+  </body>
+  </html>

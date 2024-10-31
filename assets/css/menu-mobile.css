@@ -1,0 +1,21 @@
+
+.nav-mb{
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .nav-desktop{
+        display: none;
+    }
+    .nav-mb{
+        display: block;
+    }
+    header .bottom-header .navbar-default .navbar-nav>li>a{
+        padding: 0px 11px !important;
+    }
+    .affix .container .navbar .navbar-collapse .navbar-nav > li > a{
+        padding: 0px 11px !important;
+    }
+}

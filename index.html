@@ -1,0 +1,677 @@
+<html lang="pt-br">
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adicionar o title com PHP -->
+    <!-- <title><?=$title?></title> -->
+    <title>title</title>
+
+    <!-- Adicionar baseurl em prod -->
+    <!-- <base href='<?=base_url()?>'> -->
+
+    <!-- Retornar em prod -->
+    <!-- <meta name="keywords" content="<?=$keywords ?>" />
+    <meta name="description" content="<?=$description ?>" /> -->
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="www.valoremarketing.com.br" />
+
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Retornar em prod -->
+    <!-- <meta property="og:url" content="<?=current_url() ?>" />
+    <meta property="og:title" content="<?=(isset($ogtitle)) ? $ogtitle : "Barros Autopeças" ?>" />
+    <meta property="og:site_name" content="Barros Autopeças" />
+    <meta property="og:description" content="<?=(isset($ogdescription)) ? $ogdescription : "A Barros Autopeças distribui os melhores produtos para o mercado de reposição automotiva e está sempre pronta para oferecer soluções eficientes para o setor." ?>" />
+    <meta property="og:image" content="<?=(isset($ogimage)) ? $ogimage : base_url()."assets/images/logo-barros-painel-facebook.jpg" ?>" /> -->
+
+    <meta property="og:type" content="website" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="assets/images/barros-57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/barros-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/barros-114.png" />
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/flexslider.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/css/slider.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <link href="assets/css/jquery.bxslider.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/jquery.selectbox.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/ts.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/countdown.css" rel="stylesheet" type="text/css" />
+    <!--
+        <link href="assets/css/new-version/styles.css?<?php echo filemtime('assets/css/new-version/styles.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="assets/css/new-version/responsive.css?<?php echo filemtime('assets/css/new-version/responsive.css'); ?>" rel="stylesheet" type="text/css" />
+    -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Facebook Pixel Code Remarketing -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1652239904989869');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1652239904989869&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- GA -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-56798349-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- Retornar no FTP -->
+    <!-- <?php
+    if(isset($facebookpixel)){
+        echo $facebookpixel;
+    }
+?> -->
+
+</head>
+
+<body class="relative">
+    <nav class="relative flex w-full flex-nowrap items-center justify-between bg-white shadow-dark-mild lg:flex-wrap lg:justify-start"
+        data-twe-navbar-ref>
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <!-- Hamburger button for mobile view -->
+            <button
+                class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent8"
+                aria-controls="navbarSupportedContent8" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Hamburger icon -->
+                <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Collapsible navbar container -->
+            <div class="!visible mt-2 hidden flex-grow basis-[100%] items-center justify-center lg:mt-0 lg:!flex lg:basis-auto"
+                id="navbarSupportedContent8" data-twe-collapse-item>
+                <!-- Left links -->
+                <ul class="list-style-none flex flex-col ps-0 lg:mt-1 lg:flex-row items-center" data-twe-navbar-nav-ref>
+                    <!-- Home link -->
+                    <li class="m-0 p-0" data-twe-nav-item-ref>
+                        <a class="text-[#CF0000]" aria-current="page" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/barros-header-logo.jpg" alt="Barros Autopeças"
+                                style="height: 45px; width: 160px" loading="lazy" />
+                        </a>
+                    </li>
+                    <!-- Link -->
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 ml-6" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-1.png" alt="Quem somos"
+                                style="height: 32px; width: 32px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="h-5">Quem</p>
+                                <p class="">Somos</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-2.png" alt="Filiais"
+                                style="height: 32px; width: 32px;" />
+                            <div class="text-[#CF0000] font-bold">
+                                <p class="">
+                                    Filiais
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-3.webp" alt="Fornecedores"
+                                style="height: 32px; width: 32px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="">
+                                    Fornecedores
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-4.webp" alt="Blog"
+                                style="height: 28px; width: 28px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="">
+                                    Blog
+                                </p>
+                            </div>
+
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-5.webp" alt="Contato"
+                                style="height: 28px; width: 28px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="">
+                                    Contato
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-6.webp" alt="Trabalhe Conosco"
+                                style="height: 26px; width: 26px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="h-5">
+                                    Trabalhe
+                                </p>
+                                <p class="">
+                                    Conosco
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-7.webp" alt="Cliente"
+                                style="height: 26px; width: 26px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="">
+                                    Cliente
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0" data-twe-nav-item-ref>
+                        <a class="p-0 transition duration-200 motion-reduce:transition-none lg:px-2 flex items-center"
+                            href="/" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-8.webp" alt="Compre Online"
+                                style="height: 26px; width: 26px;" />
+                            <div class="text-[#CF0000] font-bold ml-2">
+                                <p class="h-5">
+                                    Compre
+                                </p>
+                                <p class="">
+                                    Online
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="mb-4 ps-2 lg:mb-0 lg:pe-1 lg:ps-0 ml-4" data-twe-nav-item-ref>
+                        <a class="p-0 text-[#CF0000] transition duration-200 motion-reduce:transition-none lg:px-2"
+                            href="https://www.nexusautomotiveinternational.eu/en" target="_blank" data-twe-nav-link-ref>
+                            <img src="assets/images/new-version/header-logo-9.webp" alt="nexusautomotiveinternational"
+                                style="height: 28px; width: 28px" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <img src="assets/images/new-version/banner.webp" alt="banner">
+    </section>
+
+    <section class="quem-somos mt-2 flex justify-center flex-col items-center">
+        <div class="image flex justify-center mb-2">
+            <img src="assets/images/new-version/quem-somos.png" alt="">
+        </div>
+        <div class="title flex justify-center h-1 pb-8">
+            <p class="text-[#CF0000] font-bold text-[0.8em]">O GRANDE PRECURSOR DA BARROS AUTOPEÇAS FOI ANTONIO
+                FERNANDES DE BARROS, NASCIDO NA CIDADE DE ITAPIRA, INTERIOR DE SÃO PAULO</p>
+        </div>
+        <div class="divider flex justify-center">
+            <img class="w-[350px]" src="assets/images/new-version/divisor.png" alt="divisor">
+        </div>
+        <div class="text grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-[950px] p-4 font-bold mt-8">
+            <div class="text-justify">
+                <p class="mb-4">Entre os anos 1943 a 1953, casou-se com Laura Albani e foi pai de cinco filhos: Wilson, José, Maria Irene, Heloisa e Fernando. Nesse período, também resolveu montar sua própria empresa, após dedicar-se por alguns anos no mercado de secos e molhados do pai.</p>
+                <p class="mb-4">Sempre muito trabalhador, o Seu Tonico mostrou sua determinação e segurança em suas decisões, além do valor na eficiência dos negócios. Essas características garantiram-lhe o sucesso e prosperidade quando decidiu montar o seu próprio negócio, agora no setor automotivo.</p>
+                <p class="mb-4 text-[#CF0000]">De pai para filho</p>
+                <p class="mb-4">Os filhos de Seu Tonico, Wilson, José e Fernando, tomaram a frente nos negócios. Usaram os ensinamentos do pai para ampliar a empresa e iniciar uma nova etapa, onde passaram a atender também no setor atacadista.</p>
+                <p class="mb-4">A credibilidade conquistada pela empresa na época do pai colaborou com a distribuidora nos seus primeiros anos, o que originou a Barros Autopeças que conhecemos.</p>
+                <p class="mb-4">Assim como fez Tonico Barros durante a década de 60, os irmãos Wilson, José e Fernando também prepararam seus sucessores. A terceira geração, os netos do Seu Tonico, dão sangue novo à empresa, compondo o corpo diretivo da Barros Autopeças hoje.</p>
+                <img class="mt-[-40px]" src="assets/images/new-version/Imagem-Quem-Somos-54-anos.png" alt="quem somos 54 anos">
+            </div>
+            <div class="text-justify">
+                <p class="mb-4 text-[#CF0000]">A empresa de hoje</p>
+                <p class="mb-4">Atualmente, a nossa matriz da Barros Autopeças está instalada na cidade de Mogi Mirim, no interior do estado de São Paulo.</p>
+                <p class="mb-4">A empresa conta com mais de 400 funcionários, 50 representantes comerciais e uma equipe de vendedores internos em todas as suas unidades. Representa mais de 80 fornecedores e um portfólio de mais de 30 mil itens. Um terço dos colaboradores está há mais de 10 anos na empresa, e esta fidelidade e dedicação trazem muito orgulho para os diretores da Barros.</p>
+                <p class="mb-4">As unidades de negócios da Barros Autopeças estão em Bauru, Itapetininga, Mogi Mirim, Pindamonhangaba e São José do Rio Preto, no estado de São Paulo; Araxá, Belo Horizonte, Passos, Patos de Minas e Poços de Caldas, em Minas Gerais; em Curitiba, no Paraná. A Barros Autopeças também possui um centro de distribuição em Serra, no Espírito Santo.</p>
+                <p class="mb-4">A Barros move-se adiante e inicia uma nova etapa, se adianta aos movimentos do mercado e explora novos horizontes. Com isso, desde 2020, a Advance Autoparts se torna a nossa marca certificada de produtos automotivos com excelente custo-benefício.</p>
+                <p class="mb-4 text-[#CF0000]">Um olhar para o futuro</p>
+                <p class="mb-4">O futuro reserva novos desafios e a Barros Autopeças se prepara para continuar crescendo e investindo constantemente em tecnologia de comunicação e vendas on-line para trabalhar novas estratégias de negócio. Além de estar presente em todo o território nacional e no mercado digital.</p>
+                <p class="mb-4">Com uma conduta comercial diferenciada e apoiada nos melhores fornecedores, colaboradores e clientes, a Barros Autopeças segue aliando a modernidade com a tradição, sempre orientando-se nos valores que foram e continuam sendo fundamentais para seu reconhecimento no mercado.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="legado-continua w-full flex justify-center">
+        <section class="legado-continua mt-6 flex justify-center flex-col items-center w-[1200px]">
+            <div class="image flex justify-center mb-2">
+                <img src="assets/images/new-version/legado-continua.png" alt="Legado continua">
+            </div>
+            <div class="text grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-[950px] p-4 font-bold mt-2 relative">
+                <div class="absolute flex justify-between rotate-[16deg] left-[-140px] top-[-10px] w-[250px]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[70px] rotate-[120deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[70px] rotate-[120deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[70px] rotate-[120deg]">
+                </div>
+                <div class="col-visao flex items-center justify-center flex-col w-full pr-[120px]">
+                    <img src="assets/images/new-version/visao.png" alt="Visao" class="w-[80px] mb-4">
+                    <h3 class="font-bold text-[28px] mb-4">Visão</h3>
+                    <p class="w-[280px] text-center">Ser reconhecido como uma empresa essencial no mercado de reposição automotiva</p>
+                </div>
+                <div class="absolute flex justify-between right-[350px] top-[40px] w-[280px]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[100deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[100deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[100deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[100deg]">
+                </div>
+                <div class="col-missao flex items-center justify-center flex-col w-full pl-[120px]">
+                    <img src="assets/images/new-version/missao.webp" alt="Missao" class="w-[80px]">
+                    <h3 class="font-bold text-[28px] mb-4">Missão</h3>
+                    <p class="w-[280px] text-center">Oferecer soluções eficientes na distribuição de um portfólio amplo e de qualidade para o mercado de reposição automotiva</p>
+                </div>
+                <div class="absolute flex justify-between right-[-220px] top-[30px] w-[280px]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[130deg]">
+                </div>
+                <div class="absolute flex justify-between right-[-310px] top-[90px] w-[280px]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[160deg]">
+                </div>
+                <div class="absolute flex justify-between right-[-310px] top-[200px] w-[280px]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[200deg]">
+                </div>
+                <div class="absolute flex justify-between right-[-260px] top-[290px] w-[280px]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[230deg]">
+                </div>
+                <div class="absolute flex justify-between left-[-50px] bottom-[-130px] w-full">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[220deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[250deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[260deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[260deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[260deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[260deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[260deg]">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[280deg]">
+                </div>
+                <div class="absolute flex justify-between left-[-100px] bottom-[-200px] w-full">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[200deg]">
+                </div>
+                <div class="absolute flex justify-between left-[-100px] bottom-[-290px] w-full">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[190deg]">
+                </div>
+                <div class="absolute flex justify-between left-[-50px] bottom-[-375px] w-full">
+                    <img src="assets/images/new-version/steps.svg" alt="steps" class="w-[75px] rotate-[150deg]">
+                </div>
+            </div>
+            <div class="text grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-[950px] p-4 font-bold mt-32 w-full">
+                <div class="col-valores flex items-center justify-center flex-col w-full pr-[120px] pt-8">
+                    <img src="assets/images/new-version/valores.webp" alt="Valores" class="w-[80px]">
+                    <h3 class="font-bold text-[28px] mb-4 mt-4">Valores</h3>
+                </div>
+                <div class="col-texto flex items-center justify-center flex-col w-full pt-[30px]">
+                    <ul class="list-disc">
+                        <li class="mb-2">Agilidade e simplicidade na maneira de ser.</li>
+                        <li class="mb-2">Ambiente de trabalho humano e acolhedor.</li>
+                        <li class="mb-2">Cumprimento de compromissos.</li>
+                        <li class="mb-2">Ética e transparência na condução dos negócios</li>
+                        <li class="mb-2">Proporcionar retorno aos investidores.</li>
+                        <li class="mb-2">Respeito, desenvolvimento e valorização de clientes, colaboradores e fornecedores.</li>
+                        <li class="mb-2">Responsabilidade social e ambiental.</li>
+                        <li class="mb-2">Visão no futuro: aprendendo e inovando sempre</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="nossas-filiais mt-16 flex justify-center flex-col items-center">
+        <div class="image flex justify-center mb-2">
+            <img src="assets/images/new-version/nossas-filiais.png" alt="Nossas Filiais">
+        </div>
+        <div class="map w-[1200px] mt-4">
+            <h3 class="bg-[#CF0000] text-white p-4 font-bold text-[32px]">Barros Autopeças</h3>
+            <h4>MAPA AQUI</h4>
+        </div>
+    </section>
+
+    <section class="fornecedores mt-16 flex justify-center flex-col items-center">
+        <div class="image flex justify-center mb-2">
+            <img src="assets/images/new-version/fornecedores.png" alt="Fornecedores">
+        </div>
+        <div class="map w-[1200px] mt-4">
+            <h4>FORNECEDORES AQUI</h4>
+        </div>
+    </section>
+
+    <section class="banner-2 mt-32 flex justify-center flex-col items-center">
+        <div class="flex justify-center items-center w-[1140px]">
+            <img src="assets/images/new-version/banner_rapidop-e-seguro.webp" alt="banner-2" class="w-[1140px] h-[305px]">
+            <h2>Modal que abre o cadastro de compra online</h2>
+        </div>
+    </section>
+
+    <section class="contatos mt-32 flex justify-center flex-col items-center">
+        <div class="flex justify-center items-center mb-12">
+            <img src="assets/images/new-version/contatos.png" alt="contatos">
+        </div>
+        <div class="flex justify-center items-center flex-col font-bold">
+            <p>Esclareça dúvidas, envie sugestões ou outras solicitações.</p>
+            <p>Preencha o formulário com as informações necessárias. Responderemos o mais breve possível.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 w-[800px]">
+            <div class="text">
+                <div class="financeiro mb-4">
+                    <p class="font-bold text-[#CF0000]">Financeiro</p>
+                    <p class="font-bold">financeiro04@barros.com.br</p>
+                </div>
+                <div class="marketing mb-4">
+                    <p class="font-bold text-[#CF0000]">Marketing</p>
+                    <p class="font-bold">mkt@barros.com.br</p>
+                </div>
+                <div class="rh mb-4">
+                    <p class="font-bold text-[#CF0000]">RH</p>
+                    <p class="font-bold">rh@barros.com.br</p>
+                </div>
+                <div class="financeiro mb-4">
+                    <p class="font-bold text-[#CF0000]">Vendas Atacado</p>
+                    <p class="font-bold">gerencianacional@barros.com.br</p>
+                </div>
+                <div class="financeiro mb-4">
+                    <p class="font-bold text-[#CF0000]">Vendas Atacarejo</p>
+                    <p class="font-bold">gerenciaatacarejo@barros.com.br</p>
+                </div>
+                <div class="telefones mb-4 text-center pr-32">
+                    <p class="font-bold text-[#CF0000] text-[22px]">Telefones:</p>
+                    <p class="font-[500] text-[22px]">(19) 3805-7200</p>
+                    <p class="font-bold text-[22px]">0800  009 7070</p>
+                </div>
+            </div>
+            <form action="" class="bg-zinc-100 flex flex-col gap-4 p-4 pt-8">
+                <input type="text" placeholder="Nome" class="border border-black p-3" autocomplete="off">
+                <input type="email" placeholder="Email" class="border border-black p-3" autocomplete="off">
+                <input type="text" placeholder="Assunto" class="border border-black p-3" autocomplete="off">
+                <textarea name="mensagem" placeholder="Digite sua mensagem aqui..." id="mensagem" class="border border-black p-3 h-32"></textarea>
+                <button class="bg-[#283A3A] text-white p-3">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="banner-2 mt-16 flex justify-center flex-col items-center">
+        <div class="flex justify-center items-center w-[1140px]">
+            <img src="assets/images/new-version/faca-parte.png" alt="Faca parte" class="">
+        </div>
+        <div class="flex justify-center items-center flex-col font-bold mt-8">
+            <p>Junte-se a uma equipe com experiência e tradição. Envie seu currículo ou explore as vagas disponíveis nos sites mencionados abaixo.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 w-[800px]">
+            <form action="" class="bg-zinc-100 flex flex-col gap-4 p-4 pt-8">
+                <label for="nome" class="text-[#999] p-0 m-0 text-sm">Nome</label>
+                <input type="text" id="nome" placeholder="Nome" class="border border-black p-3 text-sm" autocomplete="off">
+                <label for="email" class="text-[#999] p-0 m-0 text-sm">Email</label>
+                <input type="email" id="email" placeholder="Email" class="border border-black p-3 text-sm" autocomplete="off">
+                <label for="telefone" class="text-[#999] p-0 m-0 text-sm">Telefone</label>
+                <input type="text" id="telefone" placeholder="Telefone" class="border border-black p-3 text-sm" autocomplete="off">
+                <input type="file" class="p-3" autocomplete="off">
+                <button class="bg-[#283A3A] text-white p-3">Enviar</button>
+            </form>
+            <div class="text">
+                <div class="vagas mb-4 flex justify-center items-center flex-col">
+                    <p class="font-bold text-[#CF0000] text-[22px]">Acesse nossas vagas</p>
+                    <div class="images-linkedin flex items-center mt-4">
+                        <img src="assets/images/new-version/linkedin.webp" alt="linkedin" class="mr-4 w-[170px] h-[54px]">
+                        <img src="assets/images/new-version/in.webp" alt="linkedin in" class="w-[54px] h-[54px]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="fixed bottom-12 right-4 rounded">
+        <a href="">
+            <img src="assets/images/new-version/whatts.svg" alt="" class="w-[50px]">
+        </a>
+        <a href="" class="">
+            <img src="assets/images/new-version/insta.svg" alt="" class="w-[45px]">
+        </a>
+        <a href="" class="">
+            <img src="assets/images/new-version/face.svg" alt="" class="w-[50px]">
+        </a>
+        <a href="" class="">
+            <img src="assets/images/new-version/youtube.svg" alt="" class="w-[50px]">
+        </a>
+        <a href="" class="">
+            <img src="assets/images/new-version/tiktok.svg" alt="" class="w-[50px]">
+        </a>
+        <a href="" class="">
+            <img src="assets/images/new-version/linkedin.svg" alt="" class="w-[50px]">
+        </a>
+    </div>
+
+    <nav class="bg-black h-[48px] flex items-center justify-center mt-16 p-4" role="navigation">
+        <h5 class="text-white font-bold">B.A.P. Automotiva Ltda. – R. Laura Albani de Barros, 157, Saúde, Mogi Mirim-SP
+            | Desenvolvido:
+            <a href="https://www.studioagil.com.br/" target="_blank">
+                <span class="text-[#CF0000] font-bold">Studio Ágil</span>
+            </a>
+        </h5>
+    </nav>
+
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGn2udBPGDFD3SLydQ0iXjmVHyb7ZLj98&amp;sensor=false"></script>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="assets/js/wow.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="assets/js/retina.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.inview.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="assets/js/slider.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.selectbox-0.2.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.js"></script>
+    <script type="text/javascript" src="assets/js/countdown.js"></script>
+    <script type="text/javascript" src="assets/js/main.js?v=1.5"></script>
+    <script type="text/javascript" src="assets/js/mask.js"></script>
+    <script type="text/javascript" src="assets/js/verifica-data.js"></script>
+    <script type="text/javascript" src="assets/js/devolucao_garantia.js?v=2"></script>
+    <script type="text/javascript" src="assets/js/cidades-estados.js"></script>
+
+    <script>
+        // Loader loading
+        $('.loader-container').hide()
+        $('.loadTrigger').click(function () {
+            $('.loader-container').fadeIn()
+        })
+
+
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        jQuery(function ($) {
+            $("input[name='celular'], input[name='telefone']").focusout(function () {
+                var phone, element;
+                element = $(this);
+                element.unmask();
+                phone = element.val().replace(/\D/g, '');
+                if (phone.length > 10) {
+                    element.mask("(99) 99999-9999");
+                } else {
+                    element.mask("(99) 9999-99999");
+                }
+            }).trigger('focusout');
+            $("input[name='celular1']").focusout(function () {
+                var phone, element;
+                element = $(this);
+                element.unmask();
+                phone = element.val().replace(/\D/g, '');
+                if (phone.length > 10) {
+                    element.mask("(99) 9999-99999");
+                } else {
+                    element.mask("(99) 9999-99999");
+                }
+            }).trigger('focusout');
+            $(".data").mask("99/99/9999");
+            $("input[name='nascimento']").mask("99/99/9999");
+            $("input[name='cpf'], .cpf").mask("999.999.999-99");
+            $("input[name='cnpj']").mask("99.999.999/9999-99")
+            $("input[name='telefone1']").mask("(99) 9999-9999");
+            //$("#campoTelefone").mask("(999) 999-9999");
+
+            var i = $('.active').attr('class').replace("active", "").replace("dropdown", "");
+
+            $('.nav li').mouseover(function () {
+
+                if ($(this).hasClass('active')) {
+
+                } else {
+                    $('.nav li').removeClass('active');;;
+
+                    $(this).addClass('active');
+                }
+
+            }).mouseout(function () {
+                $('.nav li').removeClass('active');
+
+                $('.nav li.' + i).addClass('active');
+            });
+
+
+        });
+    </script>
+
+    <script>
+        function segunda_via(banco) {
+
+            if (banco == "banco_do_brasil") {
+
+                $("#banco_itau").hide();
+                $("#banco_do_brasil").fadeIn();
+
+            } else {
+
+                $("#banco_do_brasil").hide();
+                $("#banco_itau").fadeIn();
+
+            }
+
+        }
+    </script>
+
+    <script>
+        $("#ativar_cliente").click(function () {
+
+            $("#representante").hide();
+            $("#cliente").fadeIn();
+
+
+        });
+
+        $("#ativar_representante").click(function () {
+
+            $("#cliente").hide();
+            $("#representante").fadeIn();
+
+
+        });
+    </script>
+
+    <script>
+        function ver_informacoes(id) {
+
+            $.ajax({
+
+                type: "post",
+                url: "barros/devolucao_ver",
+                data: 'id=' + id
+            }).success(function (retorno) {
+
+                $("#retorno_ver").html(retorno);
+                $("#ver").modal("show");
+
+            });
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("a.fancybox").fancybox({
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'speedIn': 600,
+                'speedOut': 200,
+                'overlayShow': false
+            });
+
+        });
+    </script>
+
+    <script>
+        new dgCidadesEstados({
+            cidade: document.getElementById('cidade'),
+            estado: document.getElementById('estado'),
+            change: false
+        });
+    </script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+            $(window).on('load', function () {
+                $('#opcaoRecesso').modal('show')
+            })
+        })
+    </script>
+</body>
+</html>
